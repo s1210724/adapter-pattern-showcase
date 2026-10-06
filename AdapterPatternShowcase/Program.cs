@@ -1,1 +1,3 @@
-﻿Console.WriteLine("Hello, World!");
+﻿var printer = new OldPrinter();
+
+printer.PrintDocument("Hallo wereld!");
