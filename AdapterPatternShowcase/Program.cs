@@ -1,3 +1,9 @@
-﻿var printer = new OldPrinter();
+﻿using AdapterPatternShowcase.Printers;
 
-printer.PrintDocument("Hallo wereld!");
+var oldPrinter = new OldPrinter();
+var networkPrinter = new NetworkPrinter();
+var pdfPrinter = new PdfPrinter();
+
+oldPrinter.PrintDocument("Factuur");
+networkPrinter.SendToPrinter("Rapport");
+pdfPrinter.CreatePdf("Brief");
