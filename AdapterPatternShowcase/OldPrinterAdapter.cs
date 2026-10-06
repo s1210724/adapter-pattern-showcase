@@ -5,11 +5,11 @@ using System.Text;
 
 namespace AdapterPatternShowcase
 {
-    public class PrinterAdapter : IPrinter
+    public class OldPrinterAdapter : IPrinter
     {
         private readonly OldPrinter _printer;
 
-        public PrinterAdapter(OldPrinter printer)
+        public OldPrinterAdapter(OldPrinter printer)
         {
             _printer = printer;
         }

@@ -1,7 +1,7 @@
 ﻿using AdapterPatternShowcase;
 using AdapterPatternShowcase.Printers;
 
-IPrinter oldPrinter = new PrinterAdapter(new OldPrinter());
+IPrinter oldPrinter = new OldPrinterAdapter(new OldPrinter());
 IPrinter networkPrinter = new NetworkPrinterAdapter(new NetworkPrinter());
 IPrinter pdfPrinter = new PdfPrinterAdapter(new PdfPrinter());
 
