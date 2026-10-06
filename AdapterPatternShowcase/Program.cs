@@ -1,5 +1,13 @@
 ﻿using AdapterPatternShowcase;
+using AdapterPatternShowcase.Printers;
 
-IPrinter printer = new PrinterAdapter(new OldPrinter());
+IPrinter oldPrinter = new PrinterAdapter(new OldPrinter());
+IPrinter networkPrinter = new NetworkPrinterAdapter(new NetworkPrinter());
+IPrinter pdfPrinter = new PdfPrinterAdapter(new PdfPrinter());
 
-printer.Print("Hallo wereld!");
+IPrinter[] printers = { oldPrinter, networkPrinter, pdfPrinter };
+
+foreach (var printer in printers)
+{
+    printer.Print("Hallo wereld!");
+}

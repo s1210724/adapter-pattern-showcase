@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AdapterPatternShowcase
+namespace AdapterPatternShowcase.Printers
 {
     public class OldPrinter
     {
         public void PrintDocument(string text)
         {
-            Console.WriteLine($"Printer: {text}");
+            Console.WriteLine($"Old printer: {text}");
         }
     }
 }
